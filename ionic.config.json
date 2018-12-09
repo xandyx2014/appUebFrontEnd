@@ -1,5 +1,17 @@
 {
   "name": "uebapp",
-  "integrations": {},
-  "type": "ionic-angular"
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/evento",
+      "proxyUrl": "http://localhost:3005/evento"
+    },
+    {
+      "path": "/login",
+      "proxyUrl": "http://localhost:3005/login"
+    }
+  ]
 }

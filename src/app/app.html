@@ -1,1 +1,32 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content">
+  <ion-header >
+    <ion-toolbar color="primary">
+
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+
+      <button menuClose ion-item>
+        <ion-icon  color="icon" margin-right name="home"></ion-icon>
+       <span>Home</span>
+      </button>
+      <button menuClose (click)="irAgenda()" ion-item >
+        <ion-icon   color="icon" margin-right name="md-bookmarks"></ion-icon>
+       <span>Agenda</span>
+      </button>
+      <button menuClose (click)="irExamenes()" ion-item >
+        <ion-icon   color="icon" margin-right name="md-book"></ion-icon>
+       <span>Examenes</span>
+      </button>
+      <button menuClose (click)="irHorario()" ion-item >
+        <ion-icon   color="icon" margin-right name="md-alarm"></ion-icon>
+       <span>Horario</span>
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>
